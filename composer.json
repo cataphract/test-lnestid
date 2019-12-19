@@ -7,6 +7,10 @@
     "minimum-stability": "dev",
     "require": {
         "php": "^7.2.0",
+        "ext-gd": "*",
+        "ext-intl": "*",
+        "ext-mbstring": "*",
+        "ext-memcached": "*",
         "ext-sqreen": "^1.10",
         "aws/aws-sdk-php": "^3.79",
         "barryvdh/laravel-debugbar": "^3.2",
