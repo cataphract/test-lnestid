@@ -1,0 +1,71 @@
+{
+    "name": "LNestID",
+    "description": "LNestID",
+    "keywords": ["leave a nest", "laravel"],
+    "license": "MIT",
+    "type": "project",
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^7.2.0",
+        "ext-sqreen": "^1.10",
+        "aws/aws-sdk-php": "^3.79",
+        "barryvdh/laravel-debugbar": "^3.2",
+        "fideloper/proxy": "^4.0",
+        "flowjs/flow-php-server": "^1.0",
+        "fzaninotto/faker": "^1.4",
+        "guzzlehttp/guzzle": "^6.3",
+        "intervention/image": "^2.4",
+        "laravel/framework": "5.7.*",
+        "laravel/tinker": "^1.0",
+        "league/flysystem-aws-s3-v3": "^1.0",
+        "olssonm/l5-very-basic-auth": "5.*",
+        "pusher/pusher-php-server": "~3.0",
+        "stripe/stripe-php": "^7.14",
+        "unisharp/laravel-ckeditor": "^4.7",
+        "webpatser/laravel-uuid": "^3.0"
+    },
+    "require-dev": {
+        "beyondcode/laravel-dump-server": "^1.0",
+        "filp/whoops": "^2.0",
+        "laravel/dusk": "^4.0",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "files": [
+            "app/helpers.php"
+        ],
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "laravel/dusk"
+            ]
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cover": "phpunit --coverage-html coverage",
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ]
+    },
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform" :{ 
+          "ext-sqreen": "1.10.0"
+        }
+    },
+    "prefer-stable": true
+}
